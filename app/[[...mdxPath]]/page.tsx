@@ -11,6 +11,9 @@ export async function generateMetadata(props: PageProps) {
   const path = params.mdxPath?.length ? `/${params.mdxPath.join('/')}` : '/'
   return {
     ...metadata,
+    // The home page's own title is already the site title; running it through the
+    // "%s — INVOLVO Docs" template would print the brand twice.
+    ...(path === '/' ? { title: { absolute: 'INVOLVO Documentation' } } : {}),
     alternates: { canonical: path },
     // Page front matter supplies title/description; the card image is site-wide, and
     // spreading the page's own openGraph would otherwise drop it.
