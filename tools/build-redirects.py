@@ -52,6 +52,8 @@ HELP = {
  'publish-manage-events/page/managing-applications-and-participants': '/organizers/running/applications-and-participants',
  'publish-manage-events/page/check-in-day': '/organizers/running/check-in-day',
  'publish-manage-events/page/feedback-analytics-and-tracking-links': '/organizers/running/feedback-and-analytics',
+ 'publish-manage-events/chapter/publish-an-event': '/organizers/publishing',
+ 'publish-manage-events/chapter/manage-an-event': '/organizers/running',
  'publish-manage-events': '/organizers',
  'organizations/page/organization-profiles-and-badges': '/organizations/profiles-and-badges',
  'organizations/page/following-organizations': '/organizations/following',
@@ -71,6 +73,7 @@ HELP = {
 # nothing on this site links to them directly.
 WIKI_PATHS = [
  'legal-documentation',
+ 'legal-documentation/chapter/public',
  'legal-documentation/page/privacy-policy',
  'legal-documentation/page/terms-of-service',
  'legal-documentation/page/cookie-policy',
