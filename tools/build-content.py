@@ -9,7 +9,9 @@ public/screenshots, and attaches per-page SEO front matter.
 """
 import json, os, re, sys
 
-SRC = '/tmp/claude-1000/-home-lt480/8e2b3a54-23ac-4fdc-bd27-71671dd6b348/scratchpad/bs/all/pages'
+# Directory of BookStack page JSON dumps (one <page-id>.json per page, as returned by
+# GET /api/pages/<id>). Point BOOKSTACK_DUMP at your own export to re-run this.
+SRC = os.environ.get('BOOKSTACK_DUMP', './.bookstack-dump')
 OUT = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'content')
 
 # BookStack page id -> (target path, sidebar/page title, meta description)
