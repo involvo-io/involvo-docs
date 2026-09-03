@@ -67,7 +67,9 @@ HELP = {
  'account-rewards': '/participants/account',
 }
 
-# Old BookStack URLs whose content stayed on the wiki. All six legal pages keep a stub so
+# Old BookStack URLs whose content stayed on the wiki. Internal-only locations are
+# deliberately absent: a public stub naming them would disclose the wiki's internal
+# structure for no reader benefit, noindex or not. All six legal pages keep a stub so
 # existing bookmarks still resolve, but only privacy-policy and terms-of-service are
 # visible to anonymous visitors on the wiki - the other four are restricted there, so
 # nothing on this site links to them directly.
@@ -80,7 +82,6 @@ WIKI_PATHS = [
  'legal-documentation/page/organizer-terms',
  'legal-documentation/page/organizer-dpa',
  'legal-documentation/page/subprocessor-list',
- 'infrastructure-ops-skills',
 ]
 
 TEMPLATE = """<!doctype html>
@@ -117,7 +118,8 @@ def main():
     for old in WIKI_PATHS:
         write(['books'] + old.split('/'), f'{WIKI}/books/{old}')
         n += 1
-    for shelf in ['involvo-help', 'involvo-legal-compliance', 'ai-agent-internal-docs']:
+    # 'ai-agent-internal-docs' is intentionally not listed: see the note above.
+    for shelf in ['involvo-help', 'involvo-legal-compliance']:
         target = DOCS if shelf == 'involvo-help' else f'{WIKI}/shelves/{shelf}'
         write(['shelves', shelf], target)
         n += 1
