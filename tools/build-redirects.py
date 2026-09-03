@@ -65,7 +65,10 @@ HELP = {
  'account-rewards': '/participants/account',
 }
 
-# Old BookStack URLs whose content stayed on the wiki.
+# Old BookStack URLs whose content stayed on the wiki. All six legal pages keep a stub so
+# existing bookmarks still resolve, but only privacy-policy and terms-of-service are
+# visible to anonymous visitors on the wiki - the other four are restricted there, so
+# nothing on this site links to them directly.
 WIKI_PATHS = [
  'legal-documentation',
  'legal-documentation/page/privacy-policy',

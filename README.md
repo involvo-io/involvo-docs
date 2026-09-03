@@ -18,6 +18,13 @@ Legal documents are deliberately **not** mirrored here: the wiki is their author
 and this site links to them rather than duplicating them. There is no synchronisation between
 the two systems — the MDX in `content/` is the source of truth for this site.
 
+Of the six pages in the wiki's public Legal chapter, only **Privacy Policy** and **Terms of
+Service** are actually visible to anonymous visitors; Cookie Policy, Organizer Terms,
+Organizer DPA and Subprocessor List are restricted on the wiki (pre-existing state, unrelated
+to the docs split). This site therefore links only to the two visible pages plus the book
+itself. If those four are opened up later, add them back to the footer in `app/layout.tsx`
+and to `content/platform/index.mdx`.
+
 ## Local development
 
 ```bash

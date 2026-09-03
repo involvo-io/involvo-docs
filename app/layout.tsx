@@ -62,7 +62,7 @@ const footer = (
         <a href={SITE.app}>Platform</a>
         <a href={`${SITE.wiki}/books/legal-documentation/page/terms-of-service`}>Terms of Service</a>
         <a href={`${SITE.wiki}/books/legal-documentation/page/privacy-policy`}>Privacy Policy</a>
-        <a href={`${SITE.wiki}/books/legal-documentation/page/cookie-policy`}>Cookie Policy</a>
+        <a href={`${SITE.wiki}/books/legal-documentation`}>Legal Documentation</a>
       </p>
       <p className="involvo-footer__meta">© {new Date().getFullYear()} INVOLVO</p>
     </div>
