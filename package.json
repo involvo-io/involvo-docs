@@ -1,0 +1,34 @@
+{
+  "name": "involvo-docs",
+  "version": "0.1.0",
+  "description": "Public product documentation for INVOLVO",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "private": "true",
+  "dependencies": {
+    "geist": "^1.7.2",
+    "next": "^15.5.25",
+    "nextra": "^4.6.1",
+    "nextra-theme-docs": "^4.6.1",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.1",
+    "@types/react": "^19.2.18",
+    "typescript": "^5.9.3"
+  },
+  "overrides": {
+    "zod": "4.3.6"
+  }
+}

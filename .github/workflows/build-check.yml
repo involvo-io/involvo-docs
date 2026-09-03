@@ -1,0 +1,19 @@
+name: Build check
+
+# Pull requests get a build, not a preview URL — GitHub Pages has no per-PR
+# environments. This at least fails a PR that would break the site.
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run build
