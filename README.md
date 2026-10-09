@@ -183,3 +183,10 @@ returns 404. Link and test without the trailing slash.
 **Changing a hostname** means editing `lib/site.ts` and regenerating the redirect stubs. If the
 *wiki's* hostname ever changes, note that BookStack bakes absolute URLs into stored page HTML
 at save time — updating `APP_URL` there is not enough on its own.
+
+## AI skills
+
+The Claude Code skills we use across INVOLVO's repositories are collected in
+[involvo-io/ai-skills](https://github.com/involvo-io/ai-skills) (private): `keep-alive`, `verify`,
+`deliver-pr`, `oc-review`, `ui-craft`, `driverjs-expert` and `qa-run`. Its README says what each one
+does, which repository it belongs to, and how to install one.
